@@ -1,0 +1,114 @@
+Release Notes -- Apache Jackrabbit Oak -- Version 1.38.0
+
+Introduction
+------------
+
+Jackrabbit Oak is a scalable, high-performance hierarchical content
+repository designed for use as the foundation of modern world-class
+web sites and other demanding content applications.
+
+Apache Jackrabbit Oak 1.38.0 is an incremental feature release based
+on and compatible with earlier stable Jackrabbit Oak 1.x
+releases. This release is considered stable and targeted for
+production use.
+
+While Oak 1.38.0 compiles and tests successfully on Java 15, Javadocs
+generation fails on Java 15 (but works as expected on Java 8).
+
+The Oak effort is a part of the Apache Jackrabbit project.
+Apache Jackrabbit is a project of the Apache Software Foundation.
+
+Changes in Oak 1.38.0
+---------------------
+
+Bug
+
+    [OAK-9037] - bundle:manifest fails on Java 15
+    [OAK-9265] - Oak-run tool recovery function scans for previous documents too
+    [OAK-9275] - restore test coverage of oak-auth-ldap
+    [OAK-9277] - UserProvider: misleading exception message if 'systemRelativePath' is not default
+    [OAK-9281] - NRT Index - duplicate results with similarity search
+    [OAK-9284] - LdapIdentityProvider.listGroups logs misleading warning
+    [OAK-9285] - LdapProviderConfig#getUseUidForExtId has invalid notnull annotation
+    [OAK-9298] - Date Range queries not working in elastic search index
+    [OAK-9304] - Filename with special characters in direct download URI Content-Disposition are causing HTTP 400 errors from Azure
+    [OAK-9306] - Faceting: IllegalArgumentException: dimension ... was not indexed
+    [OAK-9313] - Test failure: LoginModuleMonitorTest
+    [OAK-9314] - Broken javadoc link with ExternalGroupPrincipalProvider#findPrincipals
+    [OAK-9324] - oak-auth-ldap (UseUidForExtIdTest) tests fail (likely specific to Windows)
+
+
+Improvement
+
+    [OAK-9149] - Use batch calls in backgroundSplit
+    [OAK-9187] - LockOperation always calls SessionDelegate.refresh before executing operations
+    [OAK-9246] - Avoid hardcoding stats classes in SecurityProviderRegistration
+    [OAK-9261] - Upgrade Apache Solr to 8.6.3 and remove Embedded Solr Server
+    [OAK-9279] - Add PermissionValidator#checkIsGranted
+    [OAK-9280] - Missing assertions/verification with tests
+    [OAK-9282] - SecurityProviderRegistration: missing test for concurrent activation
+    [OAK-9288] - Simplify LdapIdentityProvider
+    [OAK-9290] - Respect nt:frozenNode definition on upgrade and migration
+    [OAK-9291] - Refactor check for referenceable nt:frozenNode definition
+    [OAK-9293] - SegmentStoreMigrator appendMode should recopy the last archive
+    [OAK-9301] - Automatically pick a merged index
+    [OAK-9303] - AbstractPersistentCache#readSegment should propagate exception RepositoryNotReachableException
+    [OAK-9311] - oak-search-elastic: use low-level client for critical operations
+    [OAK-9316] - Reduce complexity in ExternalGroupPrincipalProvider
+    [OAK-9322] - Add reference node id to integrity exception message
+    [OAK-9326] - Provide option to remove target version history from VersionCopier.copyVersionStorage
+    [OAK-9333] - Javadoc for PrincipalProvider.getPrincipalProvider is outdated
+
+Task
+
+    [OAK-9276] - oak-search-elastic: make shards/replicas configurable
+    [OAK-9287] - Upgrade to Elasticsearch 7.10.0
+    [OAK-9302] - oak-search-elastic: make fetch query parameters configurable
+    [OAK-9308] - Upgrade to Elasticsearch 7.10.1
+    [OAK-9312] - Modify oak-run to support creating indexes of type Elasticsearch
+    [OAK-9329] - upgrade to mockito-core 3.7.7
+
+
+In addition to the above-mentioned changes, this release contains all
+changes up to the previous release.
+
+For more detailed information about all the changes in this and other
+Oak releases, please see the Oak issue tracker at
+
+  https://issues.apache.org/jira/browse/OAK
+
+Release Contents
+----------------
+
+This release consists of a single source archive packaged as a zip file.
+The archive can be unpacked with the jar tool from your JDK installation.
+See the README.md file for instructions on how to build this release.
+
+The source archive is accompanied by SHA512 checksums and a
+PGP signature that you can use to verify the authenticity of your
+download. The public key used for the PGP signature can be found at
+https://www.apache.org/dist/jackrabbit/KEYS.
+
+About Apache Jackrabbit Oak
+---------------------------
+
+Jackrabbit Oak is a scalable, high-performance hierarchical content
+repository designed for use as the foundation of modern world-class
+web sites and other demanding content applications.
+
+The Oak effort is a part of the Apache Jackrabbit project.
+Apache Jackrabbit is a project of the Apache Software Foundation.
+
+For more information, visit http://jackrabbit.apache.org/oak
+
+About The Apache Software Foundation
+------------------------------------
+
+Established in 1999, The Apache Software Foundation provides organizational,
+legal, and financial support for more than 140 freely-available,
+collaboratively-developed Open Source projects. The pragmatic Apache License
+enables individual and commercial users to easily deploy Apache software;
+the Foundation's intellectual property framework limits the legal exposure
+of its 3,800+ contributors.
+
+For more information, visit http://www.apache.org/
